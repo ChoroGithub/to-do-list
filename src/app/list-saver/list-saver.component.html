@@ -1,0 +1,11 @@
+
+
+
+<button (click)="addListeToLists()">Speichern</button>
+
+<h2>All Shopping lists:</h2>
+
+<div *ngFor="let productlist of productLists.list">
+  <app-list-projector [productlist]="productlist" [headers]="headers" [changeStatus]="changeStatus"></app-list-projector>
+</div>
+

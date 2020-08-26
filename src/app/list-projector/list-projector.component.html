@@ -1,0 +1,20 @@
+
+<div>
+  <table *ngIf="productlist">
+    <tr>
+      <th *ngFor="let column of headers">
+        {{column}}
+      </th>
+    </tr>
+    <tr *ngFor="let product of productlist.liste" (click)="changeStatus(product)" [class]="product.isActive ? 'active' : 'inactive'">
+      <td>
+        {{product.name}}
+      </td>
+      <td>
+        {{product.numberOfItems}}
+      </td>
+    </tr>
+  </table>
+</div>
+
+<button (click)="new(productlist)">cli</button>

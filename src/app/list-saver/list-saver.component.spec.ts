@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FieldComponent } from './field.component';
+import { ListSaverComponent } from './list-saver.component';
 
-describe('FieldComponent', () => {
-  let component: FieldComponent;
-  let fixture: ComponentFixture<FieldComponent>;
+describe('ListSaverComponent', () => {
+  let component: ListSaverComponent;
+  let fixture: ComponentFixture<ListSaverComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FieldComponent ]
+      declarations: [ ListSaverComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FieldComponent);
+    fixture = TestBed.createComponent(ListSaverComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

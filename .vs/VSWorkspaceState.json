@@ -3,10 +3,11 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\field",
+    "\\src\\app\\add-product-to-shopping-list",
     "\\src\\app\\liste",
+    "\\src\\app\\listen-zeiger",
     "\\src\\app\\object"
   ],
-  "SelectedNode": "\\src\\app\\field\\field.component.ts",
+  "SelectedNode": "\\src\\app\\listen-zeiger\\listen-zeiger.component.ts",
   "PreviewInSolutionExplorer": false
 }
