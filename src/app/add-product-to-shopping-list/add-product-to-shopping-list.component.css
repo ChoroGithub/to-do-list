@@ -1,0 +1,7 @@
+.inactive {
+  text-decoration: line-through;
+}
+
+table, td, tr, th {
+  border: 1px solid black;
+}

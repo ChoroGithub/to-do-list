@@ -2,15 +2,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { FieldComponent } from './field/field.component';
-import { ListeComponent } from './liste/liste.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AddProductToShoppingListComponent } from './add-product-to-shopping-list/add-product-to-shopping-list.component';
+import { ListProjectorComponent } from './list-projector/list-projector.component';
+import { ListSaverComponent } from './list-saver/list-saver.component';
+import { CreateListComponent } from './create-list/create-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FieldComponent,
-    ListeComponent
+    AddProductToShoppingListComponent,
+    ListProjectorComponent,
+    ListSaverComponent,
+    CreateListComponent
   ],
   imports: [
     BrowserModule,

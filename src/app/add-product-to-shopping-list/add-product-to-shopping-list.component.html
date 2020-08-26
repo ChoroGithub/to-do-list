@@ -1,0 +1,27 @@
+Name des Produkts
+<input #newProdukt
+         (keyup.enter)="addProdukt(newProdukt.value, numberOfProducts.value)">Anzahl
+<input #numberOfProducts>
+<button (click)="addProdukt(newProdukt.value, numberOfProducts.value)">Add</button>
+
+
+<div>
+  <table *ngIf="productList">
+    <tr>
+      <th *ngFor="let column of headers">
+        {{column}}
+      </th>
+    </tr>
+    <tr *ngFor="let product of productList.liste" (click)="changeStatus(product)" [class]="product.isActive ? 'active' : 'inactive'">
+      <td>
+        {{product.name}}
+      </td>
+      <td>
+        {{product.numberOfItems}}
+      </td>
+    </tr>
+  </table>
+</div>
+<app-list-saver [productList]="productList" [headers]="headers" [changeStatus]="changeStatus"></app-list-saver>
+
+
