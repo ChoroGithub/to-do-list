@@ -39,10 +39,7 @@ export class AddProductToShoppingListComponent implements OnInit {
       if (pl.liste.length == this.a) {
         alert("Glückwunsch, Sie haben alles notwendige gekauft");
       }
-
     }
-
-
   }
 
   constructor() {
