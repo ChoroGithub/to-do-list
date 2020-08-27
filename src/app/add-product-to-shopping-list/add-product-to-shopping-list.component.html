@@ -1,9 +1,10 @@
-Name des Produkts
-<input #newProdukt
-         (keyup.enter)="addProdukt(newProdukt.value, numberOfProducts.value)">Anzahl
-<input #numberOfProducts>
-<button (click)="addProdukt(newProdukt.value, numberOfProducts.value)">Add</button>
-
+<div *ngIf="fakeElement">
+  Name of the Product
+  <input #newProdukt
+         (keyup.enter)="addProdukt(newProdukt.value, numberOfProducts.value)">    Count
+  <input #numberOfProducts>
+  <button (click)="addProdukt(newProdukt.value, numberOfProducts.value)">Add</button>
+</div>
 
 <div>
   <table *ngIf="productList">
@@ -12,7 +13,7 @@ Name des Produkts
         {{column}}
       </th>
     </tr>
-    <tr *ngFor="let product of productList.liste" (click)="changeStatus(product)" [class]="product.isActive ? 'active' : 'inactive'">
+    <tr *ngFor="let product of productList.liste" (click)="changeStatus(product, productList)" [class]="product.isActive ? 'active' : 'inactive'">
       <td>
         {{product.name}}
       </td>
@@ -22,6 +23,10 @@ Name des Produkts
     </tr>
   </table>
 </div>
-<app-list-saver [productList]="productList" [headers]="headers" [changeStatus]="changeStatus"></app-list-saver>
+
+<div *ngIf="fakeElement">
+  <app-list-saver [productList]="productList" [headers]="headers" [changeStatus]="changeStatus"></app-list-saver>
+</div>
+
 
 

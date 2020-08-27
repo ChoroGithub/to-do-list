@@ -11,8 +11,9 @@ export class AddProductToShoppingListComponent implements OnInit {
 
 
   @Input() productList;
+  @Input() fakeElement;
 
-  headers = ["Produkt name", "Anzahl der Produkten"];
+  headers = ["Product name", "Count of Products"];
 
   
   addProdukt(productname: string, productcount: number) {
@@ -23,10 +24,25 @@ export class AddProductToShoppingListComponent implements OnInit {
       p.isActive = true;
       this.productList.liste.push(p);
       }
-    }
-  
-  changeStatus(product: Product) {
+  }
+
+  a = 0;
+  changeStatus(product: Product, pl: ProductList) {
     product.isActive = !product.isActive;
+
+    if (pl) {
+      for (let i of pl.liste) {
+        if (!i.isActive) {
+          this.a = this.a + 1;
+        }
+      }
+      if (pl.liste.length == this.a) {
+        alert("Glückwunsch, Sie haben alles notwendige gekauft");
+      }
+
+    }
+
+
   }
 
   constructor() {
