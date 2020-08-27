@@ -9,8 +9,10 @@ import { ProductList } from '../object/productList';
 export class ListProjectorComponent implements OnInit {
 
   @Input() headers;
-  @Input() productlist: ProductList;
+  @Input() productList: ProductList;
   @Input() changeStatus;
+
+  a = 0;
 
   constructor() { }
 

@@ -1,11 +1,12 @@
 <div>
-  <table *ngIf="productlist">
+  <h3>Shopping list name: {{productList.name}}</h3>
+  <table *ngIf="productList">
     <tr>
       <th *ngFor="let column of headers">
         {{column}}
       </th>
     </tr>
-    <tr *ngFor="let product of productlist.liste" (click)="changeStatus(product)" [class]="product.isActive ? 'active' : 'inactive'">
+    <tr *ngFor="let product of productList.liste" (click)="changeStatus(product, productList)" [class]="product.isActive ? 'active' : 'inactive'">
       <td>
         {{product.name}}
       </td>
