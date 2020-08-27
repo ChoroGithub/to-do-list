@@ -12,10 +12,6 @@ export class ListProjectorComponent implements OnInit {
   @Input() productlist: ProductList;
   @Input() changeStatus;
 
-  new(productlist) {
-    console.log(this.productlist);
-  }
-
   constructor() { }
 
   ngOnInit(): void {

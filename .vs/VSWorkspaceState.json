@@ -4,10 +4,11 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\add-product-to-shopping-list",
-    "\\src\\app\\liste",
-    "\\src\\app\\listen-zeiger",
+    "\\src\\app\\create-list",
+    "\\src\\app\\list-projector",
+    "\\src\\app\\list-saver",
     "\\src\\app\\object"
   ],
-  "SelectedNode": "\\src\\app\\listen-zeiger\\listen-zeiger.component.ts",
+  "SelectedNode": "\\src\\app\\add-product-to-shopping-list\\add-product-to-shopping-list.component.html",
   "PreviewInSolutionExplorer": false
 }
