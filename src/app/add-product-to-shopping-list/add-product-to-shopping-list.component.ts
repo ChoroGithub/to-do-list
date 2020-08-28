@@ -16,14 +16,15 @@ export class AddProductToShoppingListComponent implements OnInit {
   headers = ["Product name", "Count of Products"];
 
   
-  addProdukt(productname: string, productcount: number) {
+  addProduct(productname: string, productcount: number) {
     if (productname) {
       let p = new Product();
       p.name = productname;
       p.numberOfItems = productcount;
       p.isActive = true;
       this.productList.liste.push(p);
-      }
+    }
+
   }
 
   a = 0;
@@ -39,6 +40,7 @@ export class AddProductToShoppingListComponent implements OnInit {
       if (pl.liste.length == this.a) {
         alert("Glückwunsch, Sie haben alles notwendige gekauft");
       }
+      this.a = 0;
     }
   }
 

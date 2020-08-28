@@ -12,7 +12,7 @@ export class ListSaverComponent implements OnInit {
   @Input() headers;
   @Input() changeStatus;
 
-
+  a = 0;
 
   productLists: ProductLists;
 

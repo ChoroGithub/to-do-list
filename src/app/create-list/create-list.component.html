@@ -1,8 +1,8 @@
 <button id="addNewList" (click)="createNewList()">Add new list</button>
 
-<div *ngIf="fakeElement" id="NameOfTheList">
+<div *ngIf="fakeElement" id="nameOfTheList">
   Name of the list
-  <input #newProductListName [(ngModel)]="productList.name">
+  <input id="newProductListName" #newProductListName [(ngModel)]="productList.name">
 </div>
 
 <app-add-product-to-shopping-list [productList]="productList" [fakeElement]="fakeElement" ></app-add-product-to-shopping-list>

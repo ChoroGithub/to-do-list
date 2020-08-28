@@ -1,9 +1,9 @@
-<div *ngIf="fakeElement">
+<div *ngIf="fakeElement" id="nameOfTheProduct">
   Name of the Product
-  <input #newProdukt
-         (keyup.enter)="addProdukt(newProdukt.value, numberOfProducts.value)">    Count
-  <input #numberOfProducts>
-  <button (click)="addProdukt(newProdukt.value, numberOfProducts.value)">Add</button>
+  <input id="newProductName" #newProduct 
+         (keyup.enter)="addProduct(newProduct.value, numberOfProducts.value)">     Count
+  <input id="newNumberOfProducts" #numberOfProducts>
+  <button id="addNewProduct" (click)="addProduct(newProduct.value, numberOfProducts.value); newProduct.value=''; numberOfProducts.value = ''">Add</button>
 </div>
 
 <div>

@@ -1,26 +1,26 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { browser, logging, element } from 'protractor';
 import { Repo } from '../PageObjects/repo.po';
-
+import { browser } from 'protractor';
 
 describe('CreateListComponent', () => {
+  let repoPage: Repo;
 
-  let repo: Repo;
-
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [  ]
-    })
-    .compileComponents();
-  }));
-
-  beforeEach(() => {
-
+  beforeEach(() => { //Jasmine "Init" Klasse, diese wird jedes mal ausgeführt, bevor ein 'it' ausgeführt wird
+    repoPage = new Repo(); //Erstellung neuer Instanz der der Page Object Klasse AppPage
   });
 
   it('should create', async () => {
-    await repo.testaddNewListButton();
-    await browser.sleep(10000);
-    await expect(await repo.getHeader()).toBe('Name of the list');
+
+    repoPage.navigateTo();
+    await expect(repoPage.testAddNewListButton());
+    //await browser.sleep(1000);
+    await repoPage.addNewListName();
+
+    await expect(repoPage.testAddNewProductButton());
+
+    await expect(repoPage.testSaveListButton());
+
+
+
+    
   });
 });

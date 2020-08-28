@@ -1,14 +1,17 @@
 {
   "ExpandedNodes": [
     "",
+    "\\e2e",
+    "\\e2e\\src",
+    "\\e2e\\src\\add-product-to-shopping-listTest",
+    "\\e2e\\src\\add-product-to-shopping-listTest\\Specs",
+    "\\e2e\\src\\list-saverTest",
+    "\\e2e\\src\\list-saverTest\\Specs",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\add-product-to-shopping-list",
     "\\src\\app\\create-list",
-    "\\src\\app\\list-projector",
-    "\\src\\app\\list-saver",
-    "\\src\\app\\object"
+    "\\src\\app\\list-projector"
   ],
-  "SelectedNode": "\\src\\app\\add-product-to-shopping-list\\add-product-to-shopping-list.component.html",
+  "SelectedNode": "\\e2e\\protractor.conf.js",
   "PreviewInSolutionExplorer": false
 }
