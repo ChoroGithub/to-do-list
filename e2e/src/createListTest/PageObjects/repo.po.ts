@@ -11,6 +11,8 @@ export class Repo {
     addNewProductButton: element(by.id('addNewProduct')),
     saveListButton: element(by.id('saveListButton')),
     productListName: element(by.id('productListName')),
+    parentTomaten: element(by.xpath("//*[text() =' Tomaten ']")).element(by.xpath('//*[@class ="inactive"]')),
+    parentSpaghetti: element(by.xpath("//*[text() =' Spaghetti ']")).element(by.xpath('//*[@class ="inactive"]')),
   }
 
   navigateTo() {
@@ -20,7 +22,6 @@ export class Repo {
   async testAddNewListButton() {
     await this.locators.addNewListButton.click();
     await expect(await this.getHeader()).toBe('Name of the list');
-
   }
 
   async getHeader() {
@@ -53,19 +54,34 @@ export class Repo {
   async testSaveListButton() {
     await this.locators.saveListButton.click();
     await expect(await this.getProductListName()).toBe('Shopping list name: Spaghetti Bolognese');
-
-
-    browser.sleep(10000);
   }
 
   async getProductListName() {
     return await this.locators.productListName.getText();
   }
 
+  async changeStatusAfterSavingFirstProduct(productName) {
+    let productElement = await this.getFirstProductElement(productName);
+    await productElement.click();
+    await expect(await this.locators.parentTomaten.getAttribute('class')).toEqual('inactive');
+  }
 
+  async getFirstProductElement(productName: string) {
+    return await element(by.xpath("//*[text() =' Tomaten ']"));
+  }
 
+  async changeStatusAfterSavingSecondProduct(productName) {
+    let productElement = await this.getSecondProductElement(productName);
+    await productElement.click();
+    var EC = protractor.ExpectedConditions;
+    browser.wait(EC.alertIsPresent(), 5000, "Alert is not getting present :(");
+    browser.switchTo().alert().accept()
+    await expect(await this.locators.parentSpaghetti.getAttribute('class')).toEqual('inactive');
+    await productElement.click();
+    browser.sleep(3000);
+  }
 
-
-
-
+  async getSecondProductElement(productName: string) {
+    return await element(by.xpath("//*[text() =' Spaghetti ']"));
+  }
 }
