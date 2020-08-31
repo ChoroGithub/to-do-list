@@ -15,7 +15,6 @@ export class AddProductToShoppingListComponent implements OnInit {
 
   headers = ["Product name", "Count of Products"];
 
-  
   addProduct(productname: string, productcount: number) {
     if (productname) {
       let p = new Product();
@@ -44,9 +43,7 @@ export class AddProductToShoppingListComponent implements OnInit {
     }
   }
 
-  constructor() {
-
-  }
+  constructor() {  }
 
   ngOnInit(): void {
   }

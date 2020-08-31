@@ -9,18 +9,12 @@ describe('CreateListComponent', () => {
   });
 
   it('should create', async () => {
-
     repoPage.navigateTo();
-    await expect(repoPage.testAddNewListButton());
-    //await browser.sleep(1000);
+    await repoPage.testAddNewListButton();
     await repoPage.addNewListName();
-
-    await expect(repoPage.testAddNewProductButton());
-
-    await expect(repoPage.testSaveListButton());
-
-
-
-    
+    await repoPage.testAddNewProductButton();
+    await repoPage.testSaveListButton();
+    await repoPage.changeStatusAfterSavingFirstProduct('Tomaten');
+    await repoPage.changeStatusAfterSavingSecondProduct('Spaghetti');
   });
 });

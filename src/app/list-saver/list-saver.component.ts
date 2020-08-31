@@ -11,11 +11,12 @@ export class ListSaverComponent implements OnInit {
   @Input() productList;
   @Input() headers;
   @Input() changeStatus;
+  @Input() newProduct;
+  @Input() numberOfProducts;
 
   a = 0;
 
   productLists: ProductLists;
-
 
   addListeToLists() {
     console.log("add Liste")

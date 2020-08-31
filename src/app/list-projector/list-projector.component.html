@@ -7,7 +7,7 @@
       </th>
     </tr>
     <tr *ngFor="let product of productList.liste" (click)="changeStatus(product, productList)" [class]="product.isActive ? 'active' : 'inactive'">
-      <td>
+      <td  class="productNameAfterSaving">
         {{product.name}}
       </td>
       <td>
