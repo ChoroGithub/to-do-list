@@ -1,17 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\e2e",
-    "\\e2e\\src",
-    "\\e2e\\src\\add-product-to-shopping-listTest",
     "\\e2e\\src\\add-product-to-shopping-listTest\\Specs",
-    "\\e2e\\src\\list-saverTest",
     "\\e2e\\src\\list-saverTest\\Specs",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\create-list",
-    "\\src\\app\\list-projector"
+    "\\src\\app\\add-product-to-shopping-list",
+    "\\src\\app\\scroll-top"
   ],
-  "SelectedNode": "\\e2e\\protractor.conf.js",
+  "SelectedNode": "\\src\\app\\scroll-top\\scroll-top.component.ts",
   "PreviewInSolutionExplorer": false
 }
