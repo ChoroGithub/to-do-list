@@ -17,9 +17,8 @@ h1 {
   flex: 1 0 auto;
   width: 100%;
   margin-bottom: 400px;
-/*  position: relative;*/
+  /*  position: relative;*/
   height: auto;
-  margin-left:25px;
 }
 
 .footer {
@@ -48,19 +47,19 @@ p {
   float: left;
 }
 
-.column.left {
-  width: 25%;
-}
+  .column.left {
+    width: 25%;
+  }
 
-.column.right {
-  margin-left: 10em;
-  width: 25%;
-}
+  .column.right {
+    margin-left: 10em;
+    width: 25%;
+  }
 
-.column.middle {
-  margin-left: 10em;
-  width: 30%;
-}
+  .column.middle {
+    margin-left: 10em;
+    width: 30%;
+  }
 
 h3 {
   color: white;
