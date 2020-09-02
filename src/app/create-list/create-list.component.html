@@ -1,8 +1,16 @@
-<button id="addNewList" (click)="createNewList()">Add new list</button>
-
-<div *ngIf="fakeElement" id="nameOfTheList">
-  Name of the list
-  <input id="newProductListName" #newProductListName [(ngModel)]="productList.name">
+<div class="container">
+  <div class="center">
+    <button id="addNewList" (click)="createNewList()">
+      <div class="tooltip">Add new list <i class="fas fa-plus-circle"></i>
+        <span class="tooltiptext">Click me</span>
+      </div>
+    </button>
+  </div>
 </div>
 
-<app-add-product-to-shopping-list [productList]="productList" [fakeElement]="fakeElement" ></app-add-product-to-shopping-list>
+<div *ngIf="fakeElement" id="nameOfTheList" class="tab">
+  Name of the list
+  <input id="newProductListName" #newProductListName [(ngModel)]="productList.name" placeholder="Enter list name">
+</div>
+
+<app-add-product-to-shopping-list [productList]="productList" [fakeElement]="fakeElement"></app-add-product-to-shopping-list>

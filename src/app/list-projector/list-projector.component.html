@@ -1,18 +1,20 @@
 <div>
   <h3 id="productListName">Shopping list name: {{productList.name}}</h3>
-  <table *ngIf="productList">
-    <tr>
-      <th *ngFor="let column of headers">
-        {{column}}
-      </th>
-    </tr>
-    <tr *ngFor="let product of productList.liste" (click)="changeStatus(product, productList)" [class]="product.isActive ? 'active' : 'inactive'">
-      <td  class="productNameAfterSaving">
-        {{product.name}}
-      </td>
-      <td>
-        {{product.numberOfItems}}
-      </td>
-    </tr>
-  </table>
+  <div class="tablePositioning" *ngIf="productList">
+    <table id="products" class="center">
+      <tr>
+        <th *ngFor="let column of headers">
+          {{column}}
+        </th>
+      </tr>
+      <tr *ngFor="let product of productList.liste" (click)="changeStatus(product, productList)" [class]="product.isActive ? 'active' : 'inactive'">
+        <td class="productNameAfterSaving">
+          {{product.name}}
+        </td>
+        <td>
+          {{product.numberOfItems}}
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>

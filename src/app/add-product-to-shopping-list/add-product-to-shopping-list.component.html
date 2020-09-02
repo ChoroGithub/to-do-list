@@ -1,13 +1,13 @@
-<div *ngIf="fakeElement" id="nameOfTheProduct">
+<div *ngIf="fakeElement" id="nameOfTheProduct" class="tab">
   Name of the Product
   <input id="newProductName" #newProduct 
-         (keyup.enter)="addProduct(newProduct.value, numberOfProducts.value)">     Count
-  <input id="newNumberOfProducts" #numberOfProducts>
-  <button id="addNewProduct" (click)="addProduct(newProduct.value, numberOfProducts.value); newProduct.value=''; numberOfProducts.value = ''">Add</button>
+         (keyup.enter)="addProduct(newProduct.value, numberOfProducts.value)" placeholder="Enter name of the product">Count
+  <input id="newNumberOfProducts" #numberOfProducts placeholder="Enter number of products">
+  <button class="button" id="addNewProduct" (click)="addProduct(newProduct.value, numberOfProducts.value); newProduct.value=''; numberOfProducts.value = ''">Add <i class="fas fa-plus-circle"></i></button>
 </div>
 
-<div>
-  <table *ngIf="productList">
+<div class="tablePositioning" *ngIf="productList">
+  <table id="products" class="center">
     <tr>
       <th *ngFor="let column of headers">
         {{column}}

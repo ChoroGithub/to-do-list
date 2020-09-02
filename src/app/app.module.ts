@@ -7,6 +7,7 @@ import { AddProductToShoppingListComponent } from './add-product-to-shopping-lis
 import { ListProjectorComponent } from './list-projector/list-projector.component';
 import { ListSaverComponent } from './list-saver/list-saver.component';
 import { CreateListComponent } from './create-list/create-list.component';
+import { ScrollTopComponent } from './scroll-top/scroll-top.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CreateListComponent } from './create-list/create-list.component';
     AddProductToShoppingListComponent,
     ListProjectorComponent,
     ListSaverComponent,
-    CreateListComponent
+    CreateListComponent,
+    ScrollTopComponent
   ],
   imports: [
     BrowserModule,

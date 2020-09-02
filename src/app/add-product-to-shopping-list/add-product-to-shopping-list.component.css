@@ -3,5 +3,82 @@
 }
 
 table, td, tr, th {
-  border: 1px solid black;
+  border: 1px solid white;
+  background-color: #3399CC;
+  color: white;
+}
+
+#products th {
+  background-color: #3399CC;
+  width:300px;
+}
+
+table.center {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+#newProductName {
+  margin-right: 1.5em;
+  width:15em;
+}
+
+#newNumberOfProducts {
+  width: 15em;
+  margin-right: 0.5em;
+}
+
+#addNewProduct {
+  padding: 15px 32px;
+  position: relative;
+  background-color: #3399CC;
+  border: none;
+  font-size: 20px;
+  color: #FFFFFF;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+  #addNewProduct:after {
+    content: "";
+    background: #1f3d4d;
+    border: none;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+  }
+
+  #addNewProduct:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s;
+    border: none;
+  }
+
+.tab {
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+  text-align: center;
+  margin-right: 1.5em;
+}
+
+.tablePositioning {
+  height: auto;
+  min-height: 30px;
+  position: relative;
+  margin-bottom: 1.5em;
 }

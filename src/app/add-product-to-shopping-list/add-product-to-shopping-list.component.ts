@@ -14,19 +14,26 @@ export class AddProductToShoppingListComponent implements OnInit {
   @Input() fakeElement;
 
   headers = ["Product name", "Count of Products"];
-
+  a = 0;
   addProduct(productname: string, productcount: number) {
     if (productname) {
       let p = new Product();
       p.name = productname;
-      p.numberOfItems = productcount;
-      p.isActive = true;
-      this.productList.liste.push(p);
-    }
+      if (productcount) {
+        if (isNaN(productcount)) {
+          alert("The count should be a number")
+        }
+        else {
+          p.numberOfItems = productcount;
+          p.isActive = true;
+          this.productList.liste.push(p);
+        }
+      }
 
+    }
   }
 
-  a = 0;
+  
   changeStatus(product: Product, pl: ProductList) {
     product.isActive = !product.isActive;
 
