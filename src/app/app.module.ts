@@ -8,6 +8,10 @@ import { ListProjectorComponent } from './list-projector/list-projector.componen
 import { ListSaverComponent } from './list-saver/list-saver.component';
 import { CreateListComponent } from './create-list/create-list.component';
 import { ScrollTopComponent } from './scroll-top/scroll-top.component';
+import { HomeComponent } from './home';
+import { LoginComponent } from './login';
+import { RegisterComponent } from './register';
+import { appRoutingModule } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -16,12 +20,16 @@ import { ScrollTopComponent } from './scroll-top/scroll-top.component';
     ListProjectorComponent,
     ListSaverComponent,
     CreateListComponent,
-    ScrollTopComponent
+    ScrollTopComponent,
+    HomeComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
+    appRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

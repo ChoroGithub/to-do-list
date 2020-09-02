@@ -3,14 +3,14 @@
 }
 
 table, td, tr, th {
-  border: 1px solid white;
-  background-color: #3399CC;
-  color: white;
+  border: 1px solid black;
+  font-size: 20px;
 }
 
 #products th {
   background-color: #3399CC;
   width:300px;
+  color: white;
 }
 
 table.center {
@@ -23,6 +23,7 @@ table.center {
 #newProductName {
   margin-right: 1.5em;
   width:15em;
+  font-size:20px;
 }
 
 #newNumberOfProducts {
@@ -31,7 +32,7 @@ table.center {
 }
 
 #addNewProduct {
-  padding: 15px 32px;
+/*  padding: 15px 32px;*/
   position: relative;
   background-color: #3399CC;
   border: none;
@@ -81,4 +82,17 @@ table.center {
   min-height: 30px;
   position: relative;
   margin-bottom: 1.5em;
+}
+
+#nameOfTheProduct {
+    font-size:20px;
+}
+
+#newNumberOfProducts {
+  font-size: 20px;
+
+}
+
+input {
+  padding: 10px
 }

@@ -1,13 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\e2e\\src\\add-product-to-shopping-listTest\\Specs",
-    "\\e2e\\src\\list-saverTest\\Specs",
     "\\src",
     "\\src\\app",
     "\\src\\app\\add-product-to-shopping-list",
-    "\\src\\app\\scroll-top"
+    "\\src\\app\\create-list",
+    "\\src\\app\\list-projector",
+    "\\src\\app\\list-saver"
   ],
-  "SelectedNode": "\\src\\app\\scroll-top\\scroll-top.component.ts",
+  "SelectedNode": "\\src\\app\\create-list\\create-list.component.css",
   "PreviewInSolutionExplorer": false
 }
