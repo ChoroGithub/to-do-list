@@ -2,7 +2,7 @@ import { browser, by, element, protractor } from 'protractor';
 
 export class Repo {
   locators = {
-    addNewListButton: element(by.buttonText('Add new list')),
+    addNewListButton: element(by.id('addNewList')),
     header: element(by.id('nameOfTheList')),
     newProductListName: element(by.id('newProductListName')),
     labelNameOfTheProduct: element(by.id('nameOfTheProduct')),
@@ -16,12 +16,12 @@ export class Repo {
   }
 
   navigateTo() {
-    return browser.get('/')
+    return browser.get('http://localhost:4200/home')
   }
 
   async testAddNewListButton() {
     await this.locators.addNewListButton.click();
-    await expect(await this.getHeader()).toBe('Name of the list');
+    await expect(await this.getHeader()).toEqual('Name of the list');
   }
 
   async getHeader() {
@@ -36,7 +36,7 @@ export class Repo {
   }
 
   async testAddNewProductButton() {
-    await expect(await this.getLabel()).toBe('Name of the Product Count Add');
+    await expect(await this.getLabel()).toEqual('Name of the Product Count Add');
 
     await this.locators.newProductName.sendKeys('Tomaten');
     await this.locators.newNumberOfProducts.sendKeys('3');
@@ -63,7 +63,7 @@ export class Repo {
   async changeStatusAfterSavingFirstProduct(productName) {
     let productElement = await this.getFirstProductElement(productName);
     await productElement.click();
-    await expect(await this.locators.parentTomaten.getAttribute('class')).toEqual('inactive');
+    await expect(await this.locators.parentTomaten.getAttribute('class')).toBe('inactive');
   }
 
   async getFirstProductElement(productName: string) {
@@ -76,7 +76,7 @@ export class Repo {
     var EC = protractor.ExpectedConditions;
     browser.wait(EC.alertIsPresent(), 5000, "Alert is not getting present :(");
     browser.switchTo().alert().accept()
-    await expect(await this.locators.parentSpaghetti.getAttribute('class')).toEqual('inactive');
+    await expect(await this.locators.parentSpaghetti.getAttribute('class')).toBe('inactive');
     await productElement.click();
     browser.sleep(3000);
   }

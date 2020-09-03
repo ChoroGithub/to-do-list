@@ -3,11 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\add-product-to-shopping-list",
     "\\src\\app\\create-list",
-    "\\src\\app\\list-projector",
-    "\\src\\app\\list-saver"
+    "\\src\\app\\home"
   ],
-  "SelectedNode": "\\src\\app\\create-list\\create-list.component.css",
+  "SelectedNode": "\\src\\app\\app.component.ts",
   "PreviewInSolutionExplorer": false
 }
