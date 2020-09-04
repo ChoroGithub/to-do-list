@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ProductList } from '../object/productList';
+import { ProductLists } from '../object/productLists';
 
 @Component({
   selector: 'app-list-projector',
@@ -11,6 +12,8 @@ export class ListProjectorComponent implements OnInit {
   @Input() headers;
   @Input() productList: ProductList;
   @Input() changeStatus;
+  @Input() productLists: ProductLists;
+
 
   a = 0;
 
