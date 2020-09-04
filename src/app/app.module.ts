@@ -12,6 +12,7 @@ import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { appRoutingModule } from './app.routing';
+import { SaveListsToJsonComponent } from './save-lists-to-json/save-lists-to-json.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { appRoutingModule } from './app.routing';
     HomeComponent,
     LoginComponent,
     RegisterComponent,
+    SaveListsToJsonComponent,
   ],
   imports: [
     BrowserModule,

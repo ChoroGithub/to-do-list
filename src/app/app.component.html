@@ -1,35 +1,26 @@
 <div class="header">
+
   <h1>{{title}}</h1>
 </div>
 
 
-<div class="mainContainer">
-  <app-create-list></app-create-list>
-</div>
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+  <div class="navbar-nav">
+    <a class="nav-item nav-link" routerLink="/">Home</a>
+    <a class="nav-item nav-link" routerLink="/login">Login</a>
+    <a class="nav-item nav-link" routerLink="/register">Register</a>
+  </div>
+</nav>
 
 
-<div class="footer">
-  <div class="row">
-    <div class="column left">
-      <div class="textAround">
-        <p style="border-style:solid; border-width:1px; padding:10px; border-left:none; border-right:none; margin-bottom:15px;">ANSTEHENDE SCHULUNGEN UND WORKSHOPS</p>
+
+
+<div class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 offset-sm-2">
+        <router-outlet></router-outlet>
       </div>
-    </div>
-    <div class="column middle">
-      <p style="border-style:solid; border-width:1px; padding:10px; border-left:none; border-right:none; margin-bottom:15px;">SIMPLYTEST GMBH</p>
-      <p>Obermaierstraße 18</p>
-      <p>90408 Nürnberg</p>
-      <br>
-      <p>Telefon: +49 (0)911 37396700</p>
-      <p>Mail: info@simplytest.de</p>
-    </div>
-    <div class="column right">
-      <p style="border-style:solid; border-width:1px; padding:10px; border-left:none; border-right:none; margin-bottom:15px;">Unternehmen</p>
-      <img id="simplyTest" src="simplyTest.png" width="1" height="1">
-      <br>
-      <a href="https://simplytest.de/impressum/">Impressum</a>
     </div>
   </div>
 </div>
-
-<app-scroll-top></app-scroll-top>
