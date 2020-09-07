@@ -13,6 +13,9 @@ import { LoginComponent } from './login';
 import { RegisterComponent } from './register';
 import { appRoutingModule } from './app.routing';
 import { SaveListsToJsonComponent } from './save-lists-to-json/save-lists-to-json.component';
+import { ReadJsonFileComponent } from './read-json-file/read-json-file.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,12 +29,15 @@ import { SaveListsToJsonComponent } from './save-lists-to-json/save-lists-to-jso
     LoginComponent,
     RegisterComponent,
     SaveListsToJsonComponent,
+    ReadJsonFileComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
     appRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]

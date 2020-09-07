@@ -1,16 +1,14 @@
 {
   "ExpandedNodes": [
     "",
-    "\\e2e",
-    "\\e2e\\src",
-    "\\e2e\\src\\createListTest",
     "\\e2e\\src\\createListTest\\PageObjects",
     "\\e2e\\src\\createListTest\\Specs",
-    "\\e2e\\src\\list-projectorTest",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\home"
+    "\\src\\app\\assets",
+    "\\src\\app\\read-json-file",
+    "\\src\\app\\save-lists-to-json"
   ],
-  "SelectedNode": "\\e2e\\src\\createListTest\\PageObjects\\repo.po.ts",
+  "SelectedNode": "\\src\\app\\read-json-file\\read-json-file.component.ts",
   "PreviewInSolutionExplorer": false
 }
